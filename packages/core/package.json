@@ -29,13 +29,13 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "test": "jest --testPathIgnorePatterns=integration",
     "test:watch": "jest --watch --testPathIgnorePatterns=integration",
     "test:integration": "jest --testPathPattern=integration",
     "test:package": "node scripts/smoke-test.js",
     "typecheck": "tsc --noEmit",
-    "dev": "tsup --watch",
+    "dev": "node init && tsup --watch",
     "size": "size-limit"
   },
   "peerDependencies": {
